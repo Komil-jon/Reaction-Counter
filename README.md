@@ -10,7 +10,7 @@ Using flask framework, MongoDB for remote database and telegram open API to auto
    - Create database 'reactioneer' and collection 'users'
 3. ## Environmental variables
    - ADMIN - your telegram ID
-   - BOT_TOKEN - your telegram bot's ID
+   - BOT_TOKEN - your telegram bot's API token
    - PASSWORD - MongoDB password
    - USERNAME - MongoDB username
    

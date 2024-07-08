@@ -258,7 +258,7 @@ def is_admin(chat_id, user_id):
         return False
 
 def database_search(query, option):
-    connection_string = f"mongodb+srv://{USERNAME}:" + PASSWORD + "@cluster0.a0mvghx.mongodb.net/?retryWrites=true&w=majority"
+    connection_string = f"mongodb+srv://{USERNAME}:{PASSWORD}@core.pur20xh.mongodb.net/?appName=Core"
     client = MongoClient(connection_string)
     db = client['reactioneer']
     collection = db['users']
@@ -268,14 +268,14 @@ def database_search(query, option):
         return collection.find(query)
 
 def database_insert(record, collection_name):
-    connection_string = f"mongodb+srv://{USERNAME}:" + PASSWORD + "@cluster0.a0mvghx.mongodb.net/?retryWrites=true&w=majority"
+    connection_string = f"mongodb+srv://{USERNAME}:{PASSWORD}@core.pur20xh.mongodb.net/?appName=Core"
     client = MongoClient(connection_string)
     db = client['reactioneer']
     collection = db[collection_name]
     collection.insert_one(record)
 
 def database_update(filter, update):
-    connection_string = f"mongodb+srv://{USERNAME}:" + PASSWORD + "@cluster0.a0mvghx.mongodb.net/?retryWrites=true&w=majority"
+    connection_string = f"mongodb+srv://{USERNAME}:{PASSWORD}@core.pur20xh.mongodb.net/?appName=Core"
     client = MongoClient(connection_string)
     db = client['reactioneer']
     collection = db['users']
